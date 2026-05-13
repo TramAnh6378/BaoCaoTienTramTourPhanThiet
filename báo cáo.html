@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Tiền Trạm Phan Thiết - VAschool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap');
+
+        :root {
+            --ocean-blue: #0077b6;
+            --sand-yellow: #ffb703;
+            --coral-red: #fb8500;
+            --deep-sea: #023e8a;
+            --wave-white: #f8fbff;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--wave-white);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .nav-title {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        .img-placeholder {
+            border: 2px dashed #cbd5e0;
+            background-color: #f1f5f9;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-placeholder:hover {
+            border-color: var(--ocean-blue);
+            background-color: #e2e8f0;
+        }
+
+        .menu-box {
+            background: linear-gradient(135deg, #fffcf0 0%, #fff8e1 100%);
+            border-left: 5px solid var(--sand-yellow);
+        }
+
+        .review-box {
+            border-left: 4px solid #4ade80;
+            background-color: #f0fdf4;
+        }
+
+        .adjust-box {
+            border-left: 4px solid #f87171;
+            background-color: #fef2f2;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .day-badge {
+            background: linear-gradient(45deg, var(--deep-sea), var(--ocean-blue));
+            color: white;
+            padding: 10px 30px;
+            border-radius: 0 50px 50px 0;
+            display: inline-block;
+            margin-left: -2rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .image-instruction {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="sticky-nav px-6 py-3 flex justify-between items-center shadow-md">
+        <div class="flex items-center gap-3">
+            <img src="https://lh3.googleusercontent.com/d/1PSEVLNxPBQeFvvqeVzjIc90G9m4e8HRA" alt="VAschool Logo" class="h-12">
+            <span class="nav-title font-bold text-blue-900 hidden md:inline">HỆ THỐNG TRƯỜNG VIỆT MỸ</span>
+        </div>
+        <div class="flex gap-4 font-bold text-blue-700">
+            <a href="#info" class="hover:text-orange-500">THÔNG TIN</a>
+            <a href="#day1" class="hover:text-orange-500">NGÀY 1</a>
+            <a href="#day2" class="hover:text-orange-500">NGÀY 2</a>
+            <a href="#day3" class="hover:text-orange-500">NGÀY 3</a>
+        </div>
+    </nav>
+
+    <!-- Trang Tiêu Đề -->
+    <header class="hero-section h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">BÁO CÁO TIỀN TRẠM</h1>
+            <p class="text-2xl md:text-3xl font-semibold mb-8 text-orange-400">CHUYẾN ĐI PHAN THIẾT - MŨI NÉ 2026</p>
+            <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+            <p class="text-lg opacity-90 uppercase tracking-widest">09/05 - 10/05/2026</p>
+            <a href="#info" class="mt-12 inline-block animate-bounce text-4xl">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Trang Thông Tin Chung -->
+<section id="info" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="glass-card p-8 md:p-12 shadow-2xl rounded-3xl bg-white/90 backdrop-blur-md border border-white/20">
+        <h2 class="text-3xl font-bold text-blue-900 mb-10 text-center flex items-center justify-center gap-3">
+            <i class="fa-solid fa-circle-info text-orange-500"></i> THÔNG TIN CHUNG CHUYẾN ĐI
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Thời gian -->
+            <div class="flex items-center gap-5 p-6 bg-blue-50 rounded-2xl border border-blue-100 hover:shadow-md transition-shadow">
+                <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500 font-bold uppercase tracking-tight">Thời gian</p>
+                    <p class="text-xl font-bold text-blue-900">15/06 - 17/06/2026</p>
+                </div>
+            </div>
+
+            <!-- Chi phí dự kiến -->
+            <div class="flex items-center gap-5 p-6 bg-orange-50 rounded-2xl border border-orange-100 hover:shadow-md transition-shadow">
+                <div class="bg-orange-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500 font-bold uppercase tracking-tight">Chi phí dự kiến</p>
+                    <p class="text-xl font-bold text-orange-700">3.950.000 VNĐ / Khách</p>
+                </div>
+            </div>
+
+            <!-- Lưu trú -->
+            <div class="flex items-center gap-5 p-6 bg-green-50 rounded-2xl border border-green-100 hover:shadow-md transition-shadow">
+                <div class="bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500 font-bold uppercase tracking-tight">Lưu trú</p>
+                    <p class="text-xl font-bold text-green-800">Sea Lion Beach Resort</p>
+                </div>
+            </div>
+
+            <!-- Số lượng khách -->
+            <div class="flex items-center gap-5 p-6 bg-purple-50 rounded-2xl border border-purple-100 hover:shadow-md transition-shadow">
+                <div class="bg-purple-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500 font-bold uppercase tracking-tight">Số lượng khách</p>
+                    <p class="text-xl font-bold text-purple-900">450 ~ 460 Khách</p>
+                    <p class="text-xs text-gray-500 italic">(HCM, Cần Thơ, Vũng Tàu)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Link File Báo Giá Google Sheet -->
+        <div class="flex justify-center">
+            <a 
+                href="https://docs.google.com/spreadsheets/d/1ggKZpswV2wnBdxGFDQG1iNN2U0JNEBw26aEekOmn9e8/edit?usp=sharing" 
+                target="_blank" 
+                class="group flex items-center gap-4 bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
+            >
+                <div class="bg-white text-green-700 w-10 h-10 rounded-lg flex items-center justify-center text-xl group-hover:rotate-12 transition-transform">
+                    <i class="fa-solid fa-file-excel"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs opacity-80 uppercase leading-none mb-1">Xem chi tiết báo cáo</p>
+                    <p class="text-lg leading-none">Mở Google Sheets</p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square ml-2 opacity-50 group-hover:opacity-100"></i>
+            </a>
+        </div>
+        <p class="text-center text-gray-400 text-xs mt-4">
+            <i class="fa-solid fa-circle-exclamation mr-1"></i> Nhấp vào nút trên để xem bản chi tiết, tải xuống hoặc in ấn.
+        </p>
+    </div>
+</section>
+
+    <!-- NGÀY 1 -->
+    <section id="day1" class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="day-badge text-2xl uppercase tracking-wider">Ngày 1: Khởi Hành</div>
+        
+        <!-- Điểm 1: Mekong Long Thành -->
+        <div class="glass-card p-6 mb-12 border-t-4 border-blue-500">
+            <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-utensils text-orange-500"></i> Nhà hàng: Mekong Long Thành
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <!-- Chỗ điền link hình ảnh 1 -->
+    <div class="rounded-xl aspect-video overflow-hidden shadow-md">
+        <img 
+            src="https://lh3.googleusercontent.com/d/1L_AQKwFLGpQA6Nu4ZCQHeZKrS5cScbsZ" 
+            alt="MEKONG" 
+            class="w-full h-full object-cover"
+            onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-gray-100\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh</p></div>';"
+        >
+    </div>
+            <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+        <img 
+            src="https://lh3.googleusercontent.com/d/1lG9a8dUpQlLPCdduytOBjIwA3WVybvld" 
+            alt="MEKONG 2" 
+            class="w-full h-full object-cover"
+            onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+        >
+    </div>
+    
+    <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+        <img 
+            src="https://lh3.googleusercontent.com/d/1cJn9tWVao-sIgItDlF9pi39I7gWenmWW" 
+            alt="MEKONG 3" 
+            class="w-full h-full object-cover"
+            onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+        >
+    </div>
+            </div>
+
+                        <div class="menu-box p-5 rounded-xl mb-6">
+    <h4 class="font-bold text-orange-700 mb-2 underline tracking-wide italic">
+        <i class="fa-solid fa-list-check mr-2"></i>THỰC ĐƠN CHI TIẾT:
+    </h4>
+    <!-- Thay đổi min-h-[80px] thành min-h-[auto] hoặc loại bỏ nó hoàn toàn -->
+    <!-- Thêm margin-bottom (mb-1) để tạo khoảng cách nhỏ giữa 2 dòng -->
+    <div class="text-gray-700 mb-1">- Món ăn: cơm tấm, bún bò, hủ tíu, bánh canh </div>
+    <div class="text-gray-700">- Nước: cafe, cafe sữa, sữa tươi, nước ngọt, trà đá, nước lọc,.. </div>
+</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="review-box p-4 rounded-xl">
+                    <h5 class="font-bold text-green-700 mb-2"><i class="fa-solid fa-magnifying-glass mr-2"></i>Nhận xét:</h5>
+                    <div class="text-gray-600"> Nhà hàng có không gian rộng rãi, đủ sức chứa cho đoàn lớn. Nhà vệ sinh sạch sẽ, nhiều phòng.</div>
+                </div>
+                <div class="adjust-box p-4 rounded-xl">
+                    <h5 class="font-bold text-red-700 mb-2"><i class="fa-solid fa-wrench mr-2"></i>Điều chỉnh:</h5>
+                    <div class="text-gray-600">Cho đoàn chọn món trước để nhà hàng chuẩn bị sớm, tránh chờ đợi.</div>
+                </div>
+            </div>
+        </div>
+
+     <div class="glass-card p-6 mb-12 border-t-4 border-blue-400">
+    <!-- Tiêu đề -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-gas-pump text-orange-500"></i> Trạm dừng chân trên cao tốc
+    </h3>
+
+    <!-- Lưới hình ảnh (3 cột trên desktop) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        
+        <!-- Ảnh 1: Toàn cảnh -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1AKsuunHzE4VaUw9FPYD6yAmZvi-QxvFC" 
+                alt="TOÀN CẢNH" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Vệ sinh -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://lh3.googleusercontent.com/d/18uy9A-Wg4oesxjwEhOC__343zJF3g5MB" 
+                alt="WC/VỆ SINH" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Khu nghỉ -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1xc2uTZ-Vi88Id_TXVOT3yoT8GEUMG2D1" 
+                alt="KHU NGHỈ" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <!-- Phần Nhận xét & Điều chỉnh (2 cột trên desktop) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Nhận xét -->
+        <div class="review-box p-4 rounded-xl">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-600 italic leading-relaxed">
+                Nhà vệ sinh nhiều, nhưng do đang sửa chữa nên còn nhiều bụi bẩn.
+            </div>
+        </div>
+
+        <!-- Điều chỉnh -->
+        <div class="adjust-box p-4 rounded-xl">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-sliders"></i> Điều chỉnh:
+            </h5>
+            <div class="text-gray-600 italic leading-relaxed">
+                Nhờ HDV thông báo với đoàn về việc nhà vệ sinh đang trong giai đoạn hoàn công nên chỉ dành cho khách có nhu cầu dùng tạm WC (không phải điểm dừng chân).
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card p-6 mb-12 border-t-4 border-blue-400">
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-landmark text-orange-500"></i> Bảo tàng Làng Chài Xưa
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        
+        <!-- Ảnh 1: Bảo tàng Làng Chài Xưa -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://cdn3.ivivu.com/2022/08/bao-tang-lang-chai-xua-ivivu-1.jpg" 
+                alt="ẢNH 1" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Không gian trưng bày -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://vcdn1-dulich.vnecdn.net/2018/07/03/1-lang-chai-xua-phanthietvn31-6406-1530616067.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=n9aQQUosynNhweF1Yi3OBw" 
+                alt="ẢNH 2" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Cảnh quan/Hiện vật -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://hongngocha.com/wp-content/uploads/2021/04/04.jpg" 
+                alt="ẢNH 3" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Nhận xét -->
+        <div class="review-box p-4 rounded-xl">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-600 italic leading-relaxed"> 
+                Phòng chiếu phim tài liệu rộng rãi, thời lượng ngắn. Tìm hiểu quy trình ủ chượp, tham quan khu phố cổ Phan Thiết, tìm hiểu về nghề muối và câu cá. 
+            </div>
+        </div>
+
+        <!-- Điều chỉnh -->
+        <div class="adjust-box p-4 rounded-xl">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-sliders"></i> Điều chỉnh:
+            </h5>
+            <div class="text-gray-600 italic leading-relaxed">
+                Sắp xếp các luồng di chuyển tham quan các địa điểm tại bảo tàng để không bị ùn tắc.
+            </div>
+        </div>
+    </div>
+</div>
+
+       <!-- Mũi Né Deli -->
+<div class="glass-card p-6 mb-12 border-t-4 border-orange-400">
+    <!-- Tiêu đề -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-utensils text-orange-500"></i> Nhà hàng Mũi Né Deli (Trưa 1)
+    </h3>
+
+    <!-- Lưới hình ảnh (3 cột) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        
+        <!-- Ảnh 1: Không gian nhà hàng -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://hotel84.com/hotel84-images/news/img1/khong-gian-nha-hang-mui-ne-.jpg" 
+                alt="KHÔNG GIAN" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Món ăn/Không gian -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://live.staticflickr.com/4748/25848098298_1a549824b2_b.jpg" 
+                alt="MÓN ĂN" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Hình ảnh từ Drive -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1NHEva7QIORoghC3QXLvlYs_uWIXZqxcE" 
+                alt="CHI TIẾT" 
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <!-- Phần Nhận xét (Đã bỏ Điều chỉnh, hiển thị full width) -->
+    <div class="pt-6 border-t border-gray-100">
+        <div class="review-box p-4 rounded-xl">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-600 italic leading-relaxed">
+                Nhà hàng nằm cạnh điểm tham quan, sức chứa lớn. Thực đơn đa dạng, dùng nước chấm từ bảo tàng.
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="glass-card p-6 mb-12 border-t-4 border-blue-600 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-fish text-orange-500"></i> Nhà hàng Đại Dương Xanh (Tối 1)
+    </h3>
+
+    <!-- Lưới hình ảnh -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1nlMDErincWJETVnghZxjI7XfYovpNhKI" 
+                alt="ẢNH 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/192A1uCczZ9XgUGrU7n0Uxn6xdXrrnuab" 
+                alt="ẢNH 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1EW_gYuPycZYtOaFVsdPqxl52iN20bbdo" 
+                alt="ẢNH 3" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <!-- Phần Nhận xét (Hiển thị Full Width) -->
+    <div class="pt-6 border-t border-gray-100">
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Không gian rộng rãi, sức chứa lớn. Nhà vệ sinh sạch sẽ.
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="glass-card p-6 mb-12 border-t-4 border-orange-400 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề khách sạn -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-hotel text-orange-500"></i> Khách sạn Sea Lion Beach Resort
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Toàn cảnh/Mặt tiền -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://eholiday.vn/wp-content/uploads/2024/08/sea-lion-beach-resort-mui-ne.o.jpg" 
+                alt="TOÀN CẢNH RESORT" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Phòng ốc/Hồ bơi -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://pix10.agoda.net/hotelImages/33601471/-1/1258fd405c3aaa2017aaeaeeae12a4de.jpg?ce=0&s=414x232" 
+                alt="HỒ BƠI/PHÒNG" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Bãi biển/Cảnh quan -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://www.360go.com.vn/datafiles/42191/upload/images/2026-01/Sea-Lion-Beach-Resort-and-Spa-10.jpg?t=1770111131" 
+                alt="BÃI BIỂN" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Phần Ưu điểm -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Ưu điểm:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Khách sạn có không gian xanh lớn, bãi biển rộng. Sức chứa lớn phù hợp cho đoàn, nhà vệ sinh sạch sẽ.
+            </div>
+        </div>
+
+        <!-- Phần Nhược điểm -->
+        <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-xmark"></i> Nhược điểm:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Cơ sở vật chất khá cũ, ánh sáng trong phòng hơi tối. Mỗi khu chỉ có 01 thang máy. Yêu cầu khách sạn vệ sinh lá cây khu vực hồ bơi thường xuyên.
+            </div>
+        </div>
+    </div>
+</div>
+    
+</section>
+
+   <section id="day2" class="py-12 bg-blue-50 px-6">
+    <div class="max-w-6xl mx-auto">
+        <!-- Badge tiêu đề ngày -->
+        <div class="day-badge text-2xl uppercase tracking-wider bg-orange-600 mb-8 inline-block px-6 py-2 rounded-full text-white font-bold shadow-lg">
+            Ngày 2: TeamBuilding & Gala
+        </div>
+
+        <!-- Khối Ăn sáng (Sea Lion Resort Breakfast) -->
+        <div class="glass-card p-6 mb-12 border-t-4 border-blue-500 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+            <!-- Tiêu đề mục -->
+            <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-coffee text-orange-500"></i> Ăn sáng tại Khách sạn
+            </h3>
+
+            <!-- Lưới hình ảnh Ăn sáng -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <!-- Ảnh 1 -->
+                <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/1qJuarR3-PWQIzP2YClwqQM7ERCEoYXjO" 
+                        alt="RESORT" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+                    >
+                </div>
+                <!-- Ảnh 2 -->
+                <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/1ST8kje0qRgIAKVHhvIQ_HUEngEyUoI6U" 
+                        alt="PHÒNG" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+                    >
+                </div>
+                <!-- Ảnh 3 -->
+                <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/11SgcIXXDu_eYYETbOg12HRUTXEGVWz5i" 
+                        alt="ĂN SÁNG" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+                    >
+                </div>
+            </div>
+
+            <!-- Nhận xét & Điều chỉnh Ăn sáng -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+                <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+                    <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check"></i> Nhận xét:
+                    </h5>
+                    <div class="text-gray-700 italic leading-relaxed">
+                        Khu vực ăn uống rộng rãi, thoáng mát. Thực đơn đa dạng.
+                    </div>
+                </div>
+                <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+                    <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders"></i> Điều chỉnh:
+                    </h5>
+                    <div class="text-gray-700 italic leading-relaxed">
+                        Thực đơn bữa sáng: Đổi một vài món dầu mỡ, thêm các món thanh đạm. Thêm chè sương sáo, sương sa hạt lựu.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <!-- TeamBuilding -->
+        <div class="glass-card p-6 mb-12 border-t-4 border-blue-400 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+            <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-people-group text-orange-500"></i> Bãi biển chơi TeamBuilding
+            </h3>
+            
+            <!-- Lưới hình ảnh TeamBuilding -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <!-- Ảnh 1: Bãi biển từ Tripadvisor -->
+                <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+                    <img 
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a8/1a/54/bird-eye-view.jpg?w=900&h=500&s=1" 
+                        alt="BÃI BIỂN" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+                    >
+                </div>
+
+                <!-- Ảnh 2: Địa hình từ Google Drive -->
+                <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/1QLBG8QJm9MQt3c4kUI5vN25qhI0K0Fqf" 
+                        alt="ĐỊA HÌNH" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+                    >
+                </div>
+
+                <!-- Ảnh 3: Sức chứa từ Google Drive -->
+                <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/1-0ukmuj7SuqmAvgCDycdzXMxm42oy1z4" 
+                        alt="SỨC CHỨA" 
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+                    >
+                </div>
+            </div>
+
+            <!-- Nhận xét & Điều chỉnh TeamBuilding -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+                <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+                    <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check"></i> Nhận xét:
+                    </h5>
+                    <div class="text-gray-700 italic leading-relaxed">
+                        Không gian lớn, cát mịn, bãi biển sạch.
+                    </div>
+                </div>
+                <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+                    <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders"></i> Điều chỉnh:
+                    </h5>
+                    <div class="text-gray-700 italic leading-relaxed">
+                        Setup chỗ dựng Backdrop, dàn âm thanh và khu vực sơ cứu y tế phục vụ Teambuilding.
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+            <!-- Ngọc Phượng -->
+<div class="glass-card p-6 mb-12 border-t-4 border-yellow-500 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-utensils text-orange-500"></i> Nhà hàng Ngọc Phượng
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://ngocphuongrestaurant.com/media/images/z4787755705661_a960bef240e2bb7cd98a9fdefe5a2799.jpg" 
+                alt="ẢNH 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://ngocphuongrestaurant.com/media/posts/483x246x1-z4796043987747_71b9f46b0c52a650d5c433aa14d8267c.jpg" 
+                alt="ẢNH 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Link từ Google Drive -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1w6g13bnlatED5x6EHDD1nobSbq9upbfS" 
+                alt="ẢNH 3" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="pt-6 border-t border-gray-100">
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Không gian rộng rãi, thoáng mát, hệ thống máy lạnh đầy đủ. Nhà vệ sinh sạch sẽ.
+            </div>
+        </div>
+    </div>
+</div>
+
+           <div class="glass-card p-6 mb-12 border-t-4 border-orange-300 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề điểm tham quan -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-mountain-sun text-orange-500"></i> Khu du lịch Bàu Trắng
+    </h3>
+
+    <!-- Lưới hình ảnh (3 cột) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Toàn cảnh đồi cát -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://homepage.momocdn.net/blogscontents/momo-upload-api-220908150052-637982460524414321.jpeg" 
+                alt="BÀU TRẮNG 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Hoạt động/Xe Jeep -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/r1-1715914529385.jpg" 
+                alt="BÀU TRẮNG 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Hình ảnh từ Drive -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1m1T9Vj07cID8KwskHlkdVpYIwO7t0YYs" 
+                alt="BÀU TRẮNG 3" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <!-- Phần Nhận xét & Điều chỉnh (2 cột) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Nhận xét -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                View chụp ảnh đẹp, dịch vụ xe jeep (tự túc).
+            </div>
+        </div>
+
+        <!-- Điều chỉnh -->
+        <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-sliders"></i> Điều chỉnh:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Báo giá dịch vụ xe Jeep cho nhân sự có nhu cầu.
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="glass-card p-6 mb-12 border-t-4 border-purple-600 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề mục -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-champagne-glasses text-orange-500"></i> Gala: Nhà hàng Hồng Vinh
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Sân khấu -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1WqncdNAOOIWDcAgVUUn1qcw5FTQzt1Cq" 
+                alt="SÂN KHẤU GALA" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Bàn tiệc -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1CQrcqGNrRQlmxDqvUbADJflgEtxZAtti" 
+                alt="BÀN TIỆC" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Âm thanh ánh sáng -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1NeQjhE47T_6zjYiVloZj4zpyt0N5cXTh" 
+                alt="ÂM THANH ÁNH SÁNG" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Khối Nhận xét -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Không gian rộng, hệ thống âm thanh, ánh sáng hiện đại. Nhiều nhà vệ sinh, không gian sạch sẽ.
+            </div>
+        </div>
+
+        <!-- Khối Điều chỉnh -->
+        <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-sliders"></i> Điều chỉnh:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Đổi loại áo bọc ghế mới và chọn màu phù hợp cho không gian tiệc.
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- NGÀY 3 -->
+    <section id="day3" class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="day-badge text-2xl uppercase tracking-wider bg-green-600">Ngày 3: NovaWorld & Kết Thúc</div>
+
+       <div class="glass-card p-6 mb-12 border-t-4 border-red-500 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề mục -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-tent text-orange-500"></i> KDL NovaWorld: Circus Land
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Circus Land -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lotustourist.vn/wp-content/uploads/2023/07/CV3.webp" 
+                alt="CIRCUS LAND" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Dino Park -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/282/2025/10/29093842/Lets-Fly-Circus-Land-Phan-Thiet.jpg" 
+                alt="DINO PARK" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Cảnh quan -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/22/d2/b4/circus-land.jpg?w=900&h=500&s=1" 
+                alt="CẢNH QUAN" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="pt-6 border-t border-gray-100">
+        <!-- Khối Nhận xét -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comment-dots"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Đa dạng các trò chơi, không gian đầy màu sắc phù hợp cho các hoạt động giải trí.
+            </div>
+        </div>
+    </div>
+</div>
+
+       <div class="glass-card p-6 mb-12 border-t-4 border-red-500 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề mục -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-dragon text-orange-500"></i> KDL NovaWorld: Dino Park
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Dino Park 1 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1Dti76KNHsYsp_G4GENk9cX5Cn9CXVEcU" 
+                alt="DINO PARK 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Dino Park 2 -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1vel1EA-v8kz_feMHJj15nRQxhYmYP3EX" 
+                alt="DINO PARK 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Cảnh quan Dino Park -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1NkgYqNEh2loHxaiDPiOPXFnEa1uR2oMe" 
+                alt="DINO PARK 3" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <!-- Phần Ưu điểm & Nhược điểm -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Ưu điểm -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Ưu điểm:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Mô hình vườn khủng long với nhiều điểm vui chơi và khám phá bổ ích.
+            </div>
+        </div>
+
+        <!-- Nhược điểm -->
+        <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-sun"></i> Nhược điểm:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Khá nắng khi đi vào mùa hè.
+            </div>
+        </div>
+    </div>
+</div>
+
+         <div class="glass-card p-6 mb-12 border-t-4 border-cyan-500 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề mục: Wonder Hill -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-anchor text-orange-500"></i> KDL NovaWorld: Wonder Hill
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Wonder Hill thực tế -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://cdn3.ivivu.com/2024/05/wonder-hill-phan-thiet-ivivu-3-1024x702.jpg" 
+                alt="WONDER HILL 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Tàu Noah (Drive link) -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1V2JOmuKzQg1zQo9IhKxXlAsdaURt-Pm9" 
+                alt="WONDER HILL 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Cảnh quan đồi (Drive link) -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1STADSYCGPXnq8XTSGfzsR8KtbEmOfwdc" 
+                alt="WONDER HILL 3" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Ưu điểm -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Ưu điểm:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Mô hình tàu Noah với nhiều điểm checkin đẹp và các điểm khám phá bổ ích. Không gian mát mẻ, có quán cafe.
+            </div>
+        </div>
+
+        <!-- Nhược điểm/Điều chỉnh -->
+        <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-exclamation"></i> Nhược điểm:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Cần tốn thời gian di chuyển lên đồi (đi cầu hoặc thuê xe). Số lượng xe trung chuyển khá ít, cần giãn cách thời gian nếu đi đoàn lớn.
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="glass-card p-6 mb-12 border-t-4 border-yellow-600 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề mục -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-utensils text-orange-500"></i> Nhà hàng Maxivic
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Ảnh 1: Google Drive link -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1I0_6eRy_zTYdkxsyQoPGKLMmGGvPFgi5" 
+                alt="MAXIVIC 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Google Drive link -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1HelZdbyv33rhNimy-iOIp8gNi17i5v81" 
+                alt="MAXIVIC 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 3: Google Drive link -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1Jz0IKwmQ93yqyIiktcARJLLYc04FGiNA" 
+                alt="MAXIVIC 3" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 3</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+        <!-- Khối Nhận xét -->
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Không gian rộng rãi phù hợp cho đoàn lớn. Thực đơn đa dạng, món ăn nêm nếm vừa miệng.
+            </div>
+        </div>
+
+        <!-- Khối Điều chỉnh -->
+        <div class="adjust-box p-4 rounded-xl bg-red-50/50 border border-red-100">
+            <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-exclamation"></i> Điều chỉnh:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Đang thi công, cần gửi lại hình ảnh sảnh và nhà vệ sinh sau khi hoàn công.
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="glass-card p-6 mb-12 border-t-4 border-blue-400 shadow-lg rounded-2xl bg-white/80 backdrop-blur-sm">
+    <!-- Tiêu đề -->
+    <h3 class="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-gas-pump text-orange-500"></i> Trạm dừng chân trên cao tốc (Lượt về)
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <!-- Ảnh 1: Google Drive link -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/1NkGoaOI2I9Txr8GiA_hS0yMSj0j4UvZB" 
+                alt="TRẠM DỪNG VỀ 1" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 1</p></div>';"
+            >
+        </div>
+        
+        <!-- Ảnh 2: Google Drive link -->
+        <div class="rounded-xl aspect-video overflow-hidden shadow-md bg-gray-100 group">
+            <img 
+                src="https://lh3.googleusercontent.com/d/191-AQ6AhO_B8hSEQ1rru-ibzgZ3tu5Mi" 
+                alt="TRẠM DỪNG VỀ 2" 
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full text-gray-400\'><i class=\'fa-solid fa-triangle-exclamation text-red-400 mb-2\'></i><p class=\'text-xs\'>Lỗi tải ảnh 2</p></div>';"
+            >
+        </div>
+    </div>
+
+    <div class="pt-6 border-t border-gray-100">
+        <div class="review-box p-4 rounded-xl bg-green-50/50 border border-green-100">
+            <h5 class="font-bold text-green-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check"></i> Nhận xét:
+            </h5>
+            <div class="text-gray-700 italic leading-relaxed">
+                Nhà vệ sinh sạch sẽ, nhiều phòng.
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6 text-center">
+        <img src="https://lh3.googleusercontent.com/d/1PSEVLNxPBQeFvvqeVzjIc90G9m4e8HRA" alt="Logo" class="h-16 mx-auto mb-6 bg-white p-2 rounded-lg">
+        <p class="text-lg font-bold mb-2">HỆ THỐNG TRƯỜNG VIỆT MỸ - VASCHOOLS</p>
+        <p class="text-blue-300 mb-6">Báo Cáo Khảo Sát Phan Thiết 2026</p>
+        <div class="flex justify-center gap-6 text-2xl">
+            <i class="fa-brands fa-facebook hover:text-orange-500 cursor-pointer"></i>
+            <i class="fa-solid fa-globe hover:text-orange-500 cursor-pointer"></i>
+            <i class="fa-solid fa-envelope hover:text-orange-500 cursor-pointer"></i>
+        </div>
+        
+            &copy; 2026 P. Hành Chính Nhân Sự.
+        </div>
+    </footer>
+
+</body>
+</html>
